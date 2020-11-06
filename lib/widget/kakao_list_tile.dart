@@ -48,7 +48,7 @@ class KakaoListTile extends StatelessWidget {
               ],
             ),
           ),
-          Text('오후 2:00')
+          Text('오후 4:00')
         ]
       ),
     );
