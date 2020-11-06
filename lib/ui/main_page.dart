@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ssac_app/ui/first_page.dart';
+import 'package:ssac_app/ui/http_test_page.dart';
 import 'package:ssac_app/ui/second_page2.dart';
 import 'package:ssac_app/ui/third_page.dart';
 
@@ -14,7 +15,8 @@ class _MainPageState extends State<MainPage> {
   List<Widget> _pages = [
     FirstPage2(), ///_page[0]
     SecondPage2(),///_page[1]
-    ThirdPage()  ///_page[2]
+    ThirdPage(),  ///_page[2]
+    HttpPage(),  ///_page[2]
   ];
 
   @override
@@ -35,6 +37,7 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(icon: Icon(Icons.home),label:'홈' ),
           BottomNavigationBarItem(icon: Icon(Icons.home_repair_service),label:'이용 서비스' ),
           BottomNavigationBarItem(icon: Icon(Icons.info_outline),label:'내 정보' ),
+          BottomNavigationBarItem(icon: Icon(Icons.network_cell),label:'HTTP') ,
         ],
       ),
       body: _pages[_index],
