@@ -5,12 +5,7 @@ class Nation {
   String end;
   String location;
 
-  Nation({
-      this.name, 
-      this.link, 
-      this.start, 
-      this.end, 
-      this.location});
+  Nation({this.name, this.link, this.start, this.end, this.location});
 
   Nation.fromJson(dynamic json) {
     name = json["name"];
@@ -29,5 +24,4 @@ class Nation {
     map["location"] = location;
     return map;
   }
-
 }

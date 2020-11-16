@@ -18,19 +18,20 @@ class _ConferencesPageState extends State<ConferencesPage> {
     // TODO: implement initState
     super.initState();
 
+    //변경시점을 알려주기 위하여 SetState 사용
+    //감싸주는위치가 중요
     fetchNations().then((value) {
       setState(() {
-      nations.addAll(value);
+        nations.addAll(value);
       });
-    } );
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child:
-        Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
@@ -44,18 +45,13 @@ class _ConferencesPageState extends State<ConferencesPage> {
               thickness: 2,
             ),
             Expanded(
-              child:
-                    ListView(
+              child: ListView(
                 children: nations
-                    .map((e) => ListTile(
-                          title: Text(e.name),
-                  subtitle: Text(e.location),
-                  onTap: (){
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => ConferenceDetailPage(e)),
-                              );
-                  },
+                    .map((e) => ListTile( title: Text(e.name),
+                          subtitle: Text(e.location), onTap: () {
+                            Navigator.push( context,
+                              MaterialPageRoute(builder: (context) => ConferenceDetailPage(e)), );
+                          },
                         ))
                     .toList(),
               ),

@@ -52,9 +52,9 @@ class _ConferenceDetailPageState extends State<ConferenceDetailPage> {
                     'Go to Official website',
                     style: TextStyle(color: Colors.lightBlueAccent),
                   ),
+                  // Url_launcher사용하여 웹부어 사용
                   onPressed: () {
                     setState(() {
-                      print(widget.selectNation.link);
                       launchWebView(widget.selectNation.link);
                     });
                   },
@@ -66,7 +66,6 @@ class _ConferenceDetailPageState extends State<ConferenceDetailPage> {
       ),
     );
   }
-
 
   launchWebView(String url) async {
     if (await canLaunch(url)) {
