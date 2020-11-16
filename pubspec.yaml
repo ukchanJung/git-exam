@@ -31,6 +31,7 @@ dependencies:
   english_words: ^3.1.5
   carousel_slider: ^2.3.1
   http: ^0.12.2
+  url_launcher: ^5.7.10
 
 dev_dependencies:
   flutter_test:

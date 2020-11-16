@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ssac_app/ui/conferences_page.dart';
 import 'package:ssac_app/ui/first_page.dart';
 import 'package:ssac_app/ui/http_test_page.dart';
 import 'package:ssac_app/ui/second_page2.dart';
@@ -16,7 +17,8 @@ class _MainPageState extends State<MainPage> {
     FirstPage2(), ///_page[0]
     SecondPage2(),///_page[1]
     ThirdPage(),  ///_page[2]
-    HttpPage(),  ///_page[2]
+    HttpPage(),  ///_page[3]
+    ConferencesPage(),  ///_page[4]
   ];
 
   @override
@@ -34,10 +36,11 @@ class _MainPageState extends State<MainPage> {
           });
         },
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home),label:'홈' ),
-          BottomNavigationBarItem(icon: Icon(Icons.home_repair_service),label:'이용 서비스' ),
-          BottomNavigationBarItem(icon: Icon(Icons.info_outline),label:'내 정보' ),
-          BottomNavigationBarItem(icon: Icon(Icons.network_cell),label:'HTTP') ,
+          BottomNavigationBarItem(icon: Center(child: Icon(Icons.home,color: Colors.orange,)),label:'홈' ),
+          BottomNavigationBarItem(icon: Icon(Icons.home_repair_service,color: Colors.orange,),label:'이용 서비스' ),
+          BottomNavigationBarItem(icon: Icon(Icons.info_outline,color: Colors.orange,),label:'내 정보' ),
+          BottomNavigationBarItem(icon: Icon(Icons.network_cell,color: Colors.orange,),label:'HTTP') ,
+          BottomNavigationBarItem(icon: Icon(Icons.album,color: Colors.orange,),label:'과제') ,
         ],
       ),
       body: _pages[_index],
